@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  🌐 **在线演示：** [https://uni-lite.vercel.app/](https://uni-lite.vercel.app/)
+  🌐 **在线演示：** [https://demo.uni-lite.cn/]
 </p>
 
 <p align="center">

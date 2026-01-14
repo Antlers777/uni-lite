@@ -3,13 +3,14 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
     title: 'Uni-Lite',
     description: '极致轻量、企业级的 Uni-App 开发模版',
+    head: [['link', { rel: 'icon', type: 'image/svg+xml', href: '/logo.svg' }]],
     themeConfig: {
         logo: '/logo.svg',
         nav: [
             { text: '指南', link: '/guide' },
             { text: '组件', link: '/components' },
             { text: '打赏', link: '/donate' },
-            { text: '在线演示', link: 'https://uni-lite.vercel.app/' }
+            { text: '在线演示', link: 'https://demo.uni-lite.cn/' }
         ],
         sidebar: [
             {
