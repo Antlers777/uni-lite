@@ -1,0 +1,14 @@
+{
+    // 开启自动保存格式化
+    "editor.formatOnSave": true,
+    // 指定 Vue 文件的默认格式化器
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    // 针对 ESLint 的自动修复配置
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    // UnoCSS 相关配置
+    "unocss.underline": true,
+    // 启用 Vue 3 的本地化 TS 支持
+    "vue.inlayHints.missingProps": true
+}

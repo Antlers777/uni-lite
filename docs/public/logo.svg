@@ -1,0 +1,19 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#42b883;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#35495e;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <!-- 外框 -->
+  <rect x="20" y="20" width="160" height="160" rx="40" fill="url(#grad)" filter="url(#shadow)"/>
+  <!-- 字母 L 的变形，像个闪电 -->
+  <path d="M70 60 L70 140 L130 140" stroke="white" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.9"/>
+  <!-- 装饰小点 -->
+  <circle cx="130" cy="70" r="12" fill="white" opacity="0.8">
+    <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite" />
+  </circle>
+</svg>

@@ -1,0 +1,29 @@
+/**
+ * 官方推荐的变量覆写方式
+ */
+:root {
+    /* 主色调：Logo 的绿色 */
+    --vp-c-brand-1: #42b883;
+    --vp-c-brand-2: #33a06f;
+    --vp-c-brand-3: #267752;
+    --vp-c-brand-soft: rgba(66, 184, 131, 0.14);
+
+    /* 首页大图背景光晕颜色 */
+    --vp-home-hero-image-background-image: linear-gradient(-45deg, #42b883 50%, #35495e 50%);
+    --vp-home-hero-image-filter: blur(150px);
+}
+
+/**
+ * 针对深色模式的微调（可选）
+ */
+.dark {
+    --vp-c-brand-1: #42b883;
+    --vp-c-brand-2: #42d392;
+    --vp-c-brand-3: #35eb9a;
+    --vp-c-brand-soft: rgba(66, 184, 131, 0.16);
+}
+
+/* 装饰：让首页的 Feature 卡片在悬停时边框变色 */
+.VPFeature:hover {
+    border-color: var(--vp-c-brand-1) !important;
+}

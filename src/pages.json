@@ -1,0 +1,56 @@
+{
+    "easycom": {
+        "autoscan": true,
+        "custom": {
+            "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue",
+            "^lite-(.*)": "@/components/layout/lite-$1.vue"
+        }
+    },
+    "pages": [
+        {
+            "path": "pages/index/index",
+            "style": {
+                "navigationStyle": "custom"
+            }
+        },
+        {
+            "path": "pages/unocss/index",
+            "style": {
+                "navigationStyle": "custom"
+            }
+        },
+        {
+            "path": "pages/tabbar/index",
+            "style": {
+                "navigationStyle": "custom"
+            }
+        },
+        {
+            "path": "pages/request/index",
+            "style": {
+                "navigationStyle": "custom"
+            }
+        },
+        {
+            "path": "pages/loading/index",
+            "style": {
+                "navigationStyle": "custom"
+            }
+        },
+        {
+            "path": "pages/status/index",
+            "style": {
+                "navigationStyle": "custom"
+            }
+        },
+        {
+            "path": "pages/theme/index",
+            "style": {
+                "navigationStyle": "custom"
+            }
+        }
+    ],
+    "globalStyle": {
+        "navigationBarTitleText": "Uni-Lite | 极致轻量模版"
+    }
+}

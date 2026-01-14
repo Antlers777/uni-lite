@@ -1,0 +1,27 @@
+{
+    "recommendations": [
+        // Vue 3 核心支持 (必装)
+        "Vue.volar",
+
+        // TypeScript 插件，让 TS 在 Vue 中跑得更稳 (必装)
+        "Vue.vscode-typescript-vue-plugin",
+
+        // UnoCSS 官方插件：支持类名提示、颜色预览、CSS 属性悬停显示 (必装)
+        "antfu.unocss",
+
+        // 代码规范校验：实时提示代码里的语法错误 (企业级推荐)
+        "dbaeumer.vscode-eslint",
+
+        // 代码格式化：按保存键自动对齐代码，保证多人协作风格一致 (企业级推荐)
+        "esbenp.prettier-vscode",
+
+        // uni-app 语法提示：支持 pages.json 和 manifest.json 的智能补全 (新手友好)
+        "dcloudio.uni-app-schemas",
+
+        // 智能显示代码中定义的颜色，一眼看出主题色 (视觉辅助)
+        "naumovs.color-highlight",
+
+        // Iconify 智能提示：如果你的 UnoCSS 用了图标，这个可以预览图标 (视觉辅助)
+        "antfu.iconify"
+    ]
+}
