@@ -13,6 +13,9 @@ hero:
           text: 快速开始
           link: /guide
         - theme: alt
+          text: 扫码预览
+          link: '#qr-preview'
+        - theme: alt
           text: 查看演示
           link: https://demo.uni-lite.cn/
 
@@ -37,27 +40,134 @@ features:
       details: 响应式主题系统。打通 Vite 环境变量与 UnoCSS 运行时，实现全站配色一键切换。
 ---
 
+<!-- 二维码展示区域 -->
+<div id="qr-preview" class="qr-container">
+  <div class="qr-card">
+    <div class="qr-info">
+      <h3>微信小程序体验</h3>
+      <p>扫码直接在真机运行演示项目</p>
+      <div class="qr-badges">
+        <span class="badge">原生体验</span>
+        <span class="badge">快速响应</span>
+      </div>
+    </div>
+    <div class="qr-image-wrapper">
+      <img src="/qr-code.jpg" alt="小程序二维码" class="qr-code-img" />
+      <div class="qr-scan-line"></div>
+    </div>
+  </div>
+</div>
+
 <style>
 :root {
-  /* 主色调：Logo 的绿色 */
   --vp-c-brand: #42b883;
   --vp-c-brand-light: #52c193;
   --vp-c-brand-lighter: #62ca9f;
   --vp-c-brand-dark: #33a06f;
   --vp-c-brand-darker: #267752;
-
-  /* 首页大图背景光晕颜色，匹配你的渐变色 */
   --vp-home-hero-image-background-image: linear-gradient( -45deg, #42b883 50%, #35495e 50% );
   --vp-home-hero-image-filter: blur(150px);
 }
 
-/* 如果用户切换到深色模式，可以微调绿色亮度 */
-.dark {
-  --vp-c-brand: #42b883;
-  --vp-c-brand-light: #52c193;
+/* 二维码容器样式 */
+.qr-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 24px;
+  background: transparent;
 }
 
-/* 装饰：让首页的 Feature 卡片在悬停时边框变色 */
+.qr-card {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  background: var(--vp-c-bg-soft);
+  padding: 30px 50px;
+  border-radius: 20px;
+  border: 1px solid var(--vp-c-divider);
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.qr-card:hover {
+  border-color: var(--vp-c-brand);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(66, 184, 131, 0.1);
+}
+
+.qr-info h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  color: var(--vp-c-text-1);
+}
+
+.qr-info p {
+  color: var(--vp-c-text-2);
+  margin-bottom: 20px;
+}
+
+.qr-badges {
+  display: flex;
+  gap: 10px;
+}
+
+.badge {
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-dark);
+  padding: 4px 12px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* 二维码图片及动效 */
+.qr-image-wrapper {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  background: white;
+  padding: 8px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.qr-code-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* 扫描线动画 */
+.qr-scan-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--vp-c-brand), transparent);
+  animation: scan 3s linear infinite;
+  box-shadow: 0 0 8px var(--vp-c-brand);
+}
+
+@keyframes scan {
+  0% { top: 0; }
+  100% { top: 100%; }
+}
+
+/* 响应式适配 */
+@media (max-width: 640px) {
+  .qr-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+    gap: 20px;
+  }
+  .qr-badges {
+    justify-content: center;
+  }
+}
+
 .VPFeature:hover {
   border-color: var(--vp-c-brand) !important;
 }
