@@ -14,7 +14,7 @@ hero:
           link: /guide
         - theme: alt
           text: 查看演示
-          link: https://uni-lite.vercel.app/
+          link: https://demo.uni-lite.cn/
 
 features:
     - icon: 🎨
